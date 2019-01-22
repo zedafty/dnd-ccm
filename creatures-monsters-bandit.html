@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head data-include="cre,mon,snd,css,crs">
+		<meta charset="utf-8">
+		<script src="scr/boot.js"></script>
+	</head>
+	<body>
+		<article class="clear">
+			<div class="media"></div>
+			<div class="record">
+				<div class="topic">
+					<h1></h1>
+					<p class="source"><span class="hide"><strong data-lng="source"></strong>&nbsp;: </span><cite></cite></p>
+				</div>
+				<div class="stat-block">
+					<h2 class="hide" data-lng="cre_stats"></h2>
+					<div class="head upper"><span class="hide"><strong data-lng="class_and_level"></strong>&nbsp;: </span><span style="display: none;" data-stat="cls_lvl"></span></div>
+					<div class="head lower"><span class="hide"><strong data-lng="type_and_size"></strong>&nbsp;: </span><span data-stat="type_size"></span></div>
+					<div><strong class="stat" data-lng="hit_dice"></strong>&nbsp;: <span class="line" data-stat="hd"></span></div>
+					<div><strong class="stat" data-lng="initiative"></strong>&nbsp;: <span class="line" data-stat="init"></span></div>
+					<div><strong class="stat" data-lng="speed"></strong>&nbsp;: <span class="line" data-stat="speed"></span></div>
+					<div><strong class="stat" data-lng="armor_class"></strong>&nbsp;: <span class="line" data-stat="ac"></span></div>
+					<div><strong class="stat" data-lng="base_attack_grapple"></strong>&nbsp;: <span class="line" data-stat="bab_grap"></span></div>
+					<div><strong class="stat" data-lng="attack"></strong>&nbsp;: <span class="line" data-stat="atk"></span></div>
+					<div><strong class="stat" data-lng="full_attack"></strong>&nbsp;: <span class="line" data-stat="full_atk"></span></div>
+					<div><strong class="stat" data-lng="space_reach"></strong>&nbsp;: <span class="line" data-stat="space_reach"></span></div>
+					<div><strong class="stat" data-lng="special_attacks"></strong>&nbsp;: <span class="line" data-stat="spe_atk"></span></div>
+					<div><strong class="stat" data-lng="special_qualities"></strong>&nbsp;: <span class="line" data-stat="spe_qlt"></span></div>
+					<div><strong class="stat" data-lng="saves"></strong>&nbsp;: <span class="line" data-stat="sv"></span></div>
+					<div><strong class="stat" data-lng="abilities"></strong>&nbsp;: <span class="line" data-stat="ab"></span></div>
+					<div><strong class="stat" data-lng="skills"></strong>&nbsp;: <span class="line" data-stat="sk"></span></div>
+					<div><strong class="stat" data-lng="feats"></strong>&nbsp;: <span class="line" data-stat="ft"></span></div>
+					<div><strong class="stat" data-lng="environment"></strong>&nbsp;: <span class="line" data-stat="env"></span></div>
+					<div><strong class="stat" data-lng="organization"></strong>&nbsp;: <span class="line" data-stat="org"></span></div>
+					<div><strong class="stat" data-lng="challenge_rating"></strong>&nbsp;: <span class="line" data-stat="cr"></span></div>
+					<div><strong class="stat" data-lng="treasure"></strong>&nbsp;: <span class="line" data-stat="trs"></span></div>
+					<div><strong class="stat" data-lng="alignment"></strong>&nbsp;: <span class="line" data-stat="aln"></span></div>
+					<div><strong class="stat" data-lng="advancement"></strong>&nbsp;: <span class="line" data-stat="adv">Niveau 2</span></div>
+					<div><strong class="stat" data-lng="level_adjustment"></strong>&nbsp;: <span class="line" data-stat="adj"></span></div>
+				</div>
+				<div class="detail">
+					<h2 class="hide" data-lng="cre_desc"></h2>
+					<p>Les brigands sont le fléau de la route, volant aussi bien les riches que les pauvres. Racailles sans vergogne ne vivant que pour prendre du bon temps, les brigands ne se soucient que d'eux-mêmes et de leur bande de fripouilles. Ils alpaguent et détroussent les voyageurs innocents, détournent les caravanes de marchands qui manquent de gardes, font payer un droit de passage sur les ponts éloignés, ou plus simplement, pillent les fermes et villages isolés.</p>
+					<p>Les brigands peuvent être les déserteurs d'une armée, des chasseurs fourvoyés, des vagabonds sans attache n'ayant aucun goût pour le labeur, des braconniers ou des voleurs de chevaux, et même des héros du peuple luttant pour la liberté en volant les riches pour nourrir les pauvres.</p>
+					<h2 data-lng="cre_combat"></h2>
+					<p>Les brigands attaquent toujours en groupe, préférant tendre des embuscades plutôt que d'engager le combat ouvertement. Ils favorisent les attaques à distance avant d'engager la mêlée pour achever les blessés.</p>
+					<p>Si le combat tourne en leur défaveur, ils n'hésiteront pas à prendre la fuite ou à se rendre si leur adversaire se dit prêt à les épargner.</p>
+				</div>
+			</div>
+		</article>
+		<script>
+			window.onload = function() {
+				initialize();
+				initializeCreature($monsters, "BANDIT");
+			};
+		</script>
+	</body>
+<html>

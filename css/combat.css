@@ -1,0 +1,111 @@
+/* ------------------------------------------------------------------ */
+/* # Table */
+/* ------------------------------------------------------------------ */
+
+/* Typo */
+caption {
+	line-height: 3rem;
+	font-size: 1.75rem;
+	font-weight: bold;
+	text-align: left;
+}
+
+/* Factions */
+table.default [data-faction='party'] {background-color: rgba(128, 192, 255, .25);}
+table.default [data-faction='ally'] {background-color: rgba(192, 255, 128, .25);}
+table.default [data-faction='enemy'] {background-color: rgba(255, 128, 128, .25);}
+table.default [data-faction='neutral'] {background-color: rgba(192, 192, 192, .25);}
+
+/* TEMP : combat condition by font */
+.disabled {
+	opacity: .5;
+}
+.disabled,
+.dying {
+	font-style: italic;
+}
+.dying,
+.dead {
+	color: crimson;
+}
+.dead {
+	text-decoration: line-through;
+}
+
+/* ------------------------------------------------------------------ */
+/* # Named Components */
+/* ------------------------------------------------------------------ */
+
+#encounter_table {table-layout: fixed;}
+.default #combat_list tr:hover {background-color: rgba(255, 192, 0, .25);}
+
+/* ------------------------------------------------------------------ */
+/* # ContentEditables */
+/* ------------------------------------------------------------------ */
+
+/* Selection */
+td[contenteditable='true'] {
+	outline-style: solid;
+	outline-width: .25rem;
+	outline-offset: -.125rem;
+	outline-color: transparent;
+}
+td[contenteditable='true']:hover {
+	cursor: pointer;
+}
+td[contenteditable='true']:focus {
+	cursor: text;
+}
+td[contenteditable].error {
+	outline-color: rgba(255, 0, 0, .5);
+}
+.default td[contenteditable='true']:hover {
+	background-color: rgb(255, 255, 224);
+}
+.default td[contenteditable='true']:focus {
+	background-color: white;
+	box-shadow: 0 0 .25rem rgba(128, 128, 96, .5);
+}
+.vanilla td[contenteditable='true'] {
+	outline-width: 1px;
+	outline-style: dashed;
+	outline-color: transparent;
+	outline-offset: -1px;
+}
+.vanilla td[contenteditable='true']:hover,
+.vanilla td[contenteditable='true']:focus {
+	outline-color: rgba(128, 128, 96, .5);
+}
+.vanilla td[contenteditable='true']:hover {
+	background-color: rgba(255, 255, 255, .5);
+}
+.vanilla td[contenteditable='true']:focus {
+	background-color: white;
+	outline-style: solid;
+	box-shadow: 0 0 .25rem rgba(128, 128, 96, .25);
+}
+
+/* ------------------------------------------------------------------ */
+/* # Click */
+/* ------------------------------------------------------------------ */
+
+td[data-click] {
+	position: relative;
+}
+td[data-click]:before {
+	position: absolute;
+	cursor: default;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.default td[data-click]:hover {
+	background-color: rgba(224, 0, 0, .75);
+	color: white;
+}
+.vanilla td[data-click]:hover {
+	background-color: rgba(224, 0, 0, .75);
+	color: white;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head data-include="pcs,npc,coo,mon,mnt,fam,ani,sum,sun,css">
+		<title>DnD CCM</title>
+		<meta charset="utf-8">
+		<script src="scr/boot.js"></script>
+		<script src="scr/search.js"></script>
+	</head>
+	<body>
+
+		<div class="row collapse">
+			<div class="col s0 m6 l7">
+				<h1>&lt;Ma campagne personnalis&eacute;e&gt;</h1>
+				<p>Le mat&eacute;riel de jeu pour &lt;ma campagne personnalis&eacute;e&gt;.</p>
+				<p>Troisi&egrave;me &eacute;dition r&eacute;vis&eacute;e de Donjons &amp; Dragons.</p>
+				<p>Une aventure pour &lt;n&gt; &agrave; &lt;m&gt; joueurs de niveau &lt;x&gt;.</p>
+			</div>
+			<div class="col s0 m4 l3 text-right">
+				<img src="img/d20.png" alt="D20 System">
+			</div>
+		</div>
+
+		<ul id="summary"></ul>
+
+		<fieldset>
+			<legend>Trouver une créature par son nom</legend>
+			<div class="row">
+				<div class="col s1 m4 l3">
+					<input type="text" style="margin-top: .5rem;" placeholder="Nom de la créature" data-search>
+				</div>
+				<div class="col s1 m6 l7">
+					<output class="box border" style="" data-result>&nbsp;</output>
+				</div>
+			</div>
+		</fieldset>
+
+		<!--
+		<p>Trouver une créature par son type ou son sous-type</p>
+		<p>Trouver une créature par son nombre de HD</p>
+		<p>Trouver une créature par son FP</p>
+		<p>Trouver une créature par sa source</p>
+		<p>Trouver une créature par son environnement</p>
+		-->
+
+		<div style="padding: 1rem; border-radius: .375rem; border: 1px solid silver; background-color: whitesmoke;">
+			<h4 style="color: crimson;">Storage Feedback</h4>
+			<p>Session Storage : <a id="print_storage" href="javascript:void(0)">Print</a> | <a id="clear_storage" href="javascript:void(0)">Clear</a></p>
+			<output id="print_box"></output>
+		</div>
+
+		<script>
+			window.onload = function() {
+
+				initialize();
+				initializeSearch();
+				createMenu($nav.root, document.getElementById("summary"), "");
+
+				function editStorage(f) {
+					var a = $usr, k, t, s = "";
+					for (k in a) {
+						if (f == "clear") sessionStorage.removeItem(a[k]);
+						t = "> " + k + " = " + sessionStorage.getItem(a[k]);
+						s += t + "<br>";
+						log(t);
+					} document.getElementById("print_box").innerHTML = s;
+				}
+
+				document.getElementById("print_storage").addEventListener("click", function() {editStorage("print")});
+				document.getElementById("clear_storage").addEventListener("click", function() {editStorage("clear")});
+
+
+			};
+		</script>
+	</body>
+<html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head data-include="cre,pcs,npc,coo,mon,mnt,fam,ani,sum,sun,css">
+		<meta charset="utf-8">
+		<script src="scr/boot.js"></script>
+		<!--
+		<script src="dat/cre/animals.js"></script>
+		<script src="dat/cre/cohorts.js"></script>
+		<script src="dat/cre/familiars.js"></script>
+		<script src="dat/cre/monsters.js"></script>
+		<script src="dat/cre/mounts.js"></script>
+		<script src="dat/cre/npcs.js"></script>
+		<script src="dat/cre/pcs.js"></script>
+		<script src="dat/cre/summon_monsters.js"></script>
+		<script src="dat/cre/summon_naturals.js"></script>
+		-->
+		<script src="scr/combat.js"></script>
+		<link href="css/combat.css" rel="stylesheet">
+	</head>
+	<body>
+
+		<h1 data-lng="encounter"></h1>
+
+			<table id="encounter_table" class="default">
+				<caption id="combat_round">Round <span data-round>0</span></caption>
+				<thead id="encounter_head">
+					<tr>
+						<th data-col="order" style="width: 4rem;">Ordre</th>
+						<th data-col="name">Nom</th>
+						<th data-col="hp">PV</th>
+						<th data-col="init_roll" style="width: 4rem;">D20</th>
+						<th data-col="init_mod" style="width: 4rem;">Init.</th>
+						<th data-col="ecl" style="width: 4rem;"><abbr title="Niveau effectif de personnage">NEP</abbr></th>
+						<th data-col="cr" style="width: 4rem;"><abbr title="Facteur de puissance">FP</abbr></th>
+						<th data-col="coins" style="width: 4rem;">Pi&egrave;ces</th>
+						<th data-col="goods" style="width: 4rem;">Biens</th>
+						<th data-col="items" style="width: 4rem;">Objets</th>
+						<th data-col="xp" style="width: 4rem;">PX</th>
+						<th data-col="dup" style="width: 2rem;"><abbr title="Cloner">C</abbr></th>
+						<th data-col="del" style="width: 2rem;"><abbr title="Supprimer">S</abbr></th>
+					</tr>
+				</thead>
+				<tbody id="combat_list">
+
+					<tr data-faction="party">
+						<td>#</td>
+						<td contenteditable="true" spellcheck="false">Vadania</td>
+						<td contenteditable="true">&ndash;</td>
+						<td contenteditable="true">0</td>
+						<td contenteditable="true">+3</td>
+						<td contenteditable="true">3</td>
+						<td>&ndash;</td>
+						<td>&ndash;</td>
+						<td>&ndash;</td>
+						<td>&ndash;</td>
+						<td>&ndash;</td>
+						<td data-click><i class="clone"></i></td>
+						<td data-click><i class="trash"></i></td>
+					</tr>
+
+					<tr data-faction="ally">
+						<td>#</td>
+						<td contenteditable="true" spellcheck="false">Loup</td>
+						<td contenteditable="true">&ndash;</td>
+						<td contenteditable="true">0</td>
+						<td contenteditable="true">+1</td>
+						<td>&ndash;</td>
+						<td>&ndash;</td>
+						<td>&ndash;</td>
+						<td>&ndash;</td>
+						<td>&ndash;</td>
+						<td>&ndash;</td>
+						<td data-click><i class="clone"></td>
+						<td data-click><i class="trash"></td>
+					</tr>
+
+					<tr data-faction="party">
+						<td>#</td>
+						<td contenteditable="true" spellcheck="false">Tordek</td>
+						<td contenteditable="true">&ndash;</td>
+						<td contenteditable="true">0</td>
+						<td contenteditable="true">+2</td>
+						<td contenteditable="true">3</td>
+						<td>&ndash;</td>
+						<td>&ndash;</td>
+						<td>&ndash;</td>
+						<td>&ndash;</td>
+						<td>&ndash;</td>
+						<td data-click><i class="clone"></td>
+						<td data-click><i class="trash"></td>
+					</tr>
+
+					<tr data-faction="party">
+						<td>#</td>
+						<td contenteditable="true" spellcheck="false">Myalee</td>
+						<td contenteditable="true">&ndash;</td>
+						<td contenteditable="true">0</td>
+						<td contenteditable="true">+2</td>
+						<td contenteditable="true">3</td>
+						<td>&ndash;</td>
+						<td>&ndash;</td>
+						<td>&ndash;</td>
+						<td>&ndash;</td>
+						<td>&ndash;</td>
+						<td data-click><i class="clone"></td>
+						<td data-click><i class="trash"></td>
+					</tr>
+
+					<tr data-faction="ally">
+						<td>#</td>
+						<td contenteditable="true" spellcheck="false">Imoen</td>
+						<td contenteditable="true">&ndash;</td>
+						<td contenteditable="true">0</td>
+						<td contenteditable="true">+4</td>
+						<td>&ndash;</td>
+						<td>&ndash;</td>
+						<td>&ndash;</td>
+						<td>&ndash;</td>
+						<td>&ndash;</td>
+						<td>&ndash;</td>
+						<td data-click><i class="clone"></td>
+						<td data-click><i class="trash"></td>
+					</tr>
+
+				</tbody>
+			</table>
+
+			<div id="encounter_buttons" class="inline" style="margin-top: 1rem;">
+
+				<fieldset>
+					<legend>Round</legend>
+					<input type="button" value="Reculer" data-prev-round>
+					<input type="button" value="Avancer" data-next-round>
+				</fieldset>
+
+				<fieldset>
+					<legend>Calculs</legend>
+					<input type="button" value="Calculer PX" data-calc-xp>
+					<input type="button" value="Générer trésor" disabled>
+				</fieldset>
+
+				<fieldset>
+					<legend>Affichage</legend>
+					<input type="button" value="Trier" data-sort-switch>
+					<input type="button" value="Voir" data-view-switch>
+					<input type="button" value="Habiller" data-theme>
+				</fieldset>
+
+				<fieldset>
+					<legend>Session</legend>
+					<input type="button" value="Sauvegarder" data-save>
+					<input type="button" value="Charger" data-load>
+					<input type="button" value="Supprimer" data-erase>
+				</fieldset>
+
+				<fieldset>
+					<legend>Ennemis</legend>
+					<select id="monster_list"></select>
+					<button class="small" data-add-monster><i class="plus"></i></button>
+				</fieldset>
+
+				<fieldset>
+					<legend>Neutres</legend>
+					<select id="npc_list"></select>
+					<button class="small" data-add-npc><i class="plus"></i></button>
+					<select id="summon_monster_list"></select>
+					<button class="small" data-add-summon-monster><i class="plus"></i></button>
+					<select id="summon_natural_list"></select>
+					<button class="small" data-add-summon-natural><i class="plus"></i></button>
+				</fieldset>
+
+				<fieldset>
+					<legend>Amis</legend>
+					<select id="pc_list"></select>
+					<button class="small" data-add-pc><i class="plus"></i></button>
+					<select id="assoc_list"></select>
+					<button class="small" data-add-assoc><i class="plus"></i></button>
+				</fieldset>
+
+			</div>
+
+		<script>
+			window.onload = function() {
+				initialize();
+				initializeCombat();
+			};
+		</script>
+	</body>
+<html>

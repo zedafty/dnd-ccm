@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head data-include="snd,css,crs">
+		<meta charset="utf-8">
+		<script src="scr/boot.js"></script>
+		<link href="css/creature.css" rel="stylesheet">
+	</head>
+	<body>
+		<article>
+			<div class="media"></div>
+			<div class="record">
+				<div class="topic">
+					<h1>Xvart</h1>
+					<p class="source"><span class="hide"><strong data-lng="source"></strong>&#8239;: </span><cite data-src="bg1_fr"></cite></p>
+				</div>
+				<div class="stat-block">
+					<h2 class="hide" data-lng="cre_stats"></h2>
+					<div class="head upper"><span class="hide"><strong data-lng="class_and_level"></strong>&nbsp;: </span>Homme d&rsquo;armes de niveau 1<span style="display: none;"></span></div>
+					<div class="head lower"><span class="hide"><strong data-lng="type_and_size"></strong>&nbsp;: </span><span>Humano&iuml;de (gobelino&iuml;de) de taille P</span></div>
+					<div><strong class="stat" data-lng="hit_dice"></strong>&nbsp;: <span class="line">1d8+1 (5 pv)</span></div>
+					<div><strong class="stat" data-lng="initiative"></strong>&nbsp;: <span class="line">+1</span></div>
+					<div><strong class="stat" data-lng="speed"></strong>&nbsp;: <span class="line">9 m (6 cases)</span></div>
+					<div><strong class="stat" data-lng="armor_class"></strong>&nbsp;: <span class="line">15* (+1 taille, +1 Dex, +2 armure de cuir, +1 targe), contact 12, pris au dépourvu 14*</span></div>
+					<div><strong class="stat" data-lng="base_attack_grapple"></strong>&nbsp;: <span class="line">+1/-3</span></div>
+					<div><strong class="stat" data-lng="attack"></strong>&nbsp;: <span class="line">épée courte (+2 corps à corps, 1d6/19-20) ; ou fronde (+3 distance, 1d4)</span></div>
+					<div><strong class="stat" data-lng="full_attack"></strong>&nbsp;: <span class="line">épée courte (+2 corps à corps, 1d6/19-20) ; ou fronde (+3 distance, 1d4)</span></div>
+					<div><strong class="stat" data-lng="space_reach"></strong>&nbsp;: <span class="line">1,50 m/1,50 m</span></div>
+					<div><strong class="stat" data-lng="special_attacks"></strong>&nbsp;: <span class="line">&mdash;</span></div>
+					<div><strong class="stat" data-lng="special_qualities"></strong>&nbsp;: <span class="line">vision dans le noir (18 m)</span></div>
+					<div><strong class="stat" data-lng="saves"></strong>&nbsp;: <span class="line">Réf +1, Vig +3, Vol +0</span></div>
+					<div><strong class="stat" data-lng="abilities"></strong>&nbsp;: <span class="line">For 10, Dex 13, Con 13, Int 9, Sag 10, Cha 6</span></div>
+					<div><strong class="stat" data-lng="skills"></strong>&nbsp;: <span class="line">Détection +3, Discrétion +5*, Perception auditive +3, Survie +2</span></div>
+					<div><strong class="stat" data-lng="feats"></strong>&nbsp;: <span class="line">Vigilance</span></div>
+					<div><strong class="stat" data-lng="environment"></strong>&nbsp;: <span class="line">collines tempérées, montagnes tempérées</span></div>
+					<div><strong class="stat" data-lng="organization"></strong>&nbsp;: <span class="line">groupe (4–9), bande (10–100 plus 100% de non-combattants, 1 sergent de niveau 3 tous les 20 adultes et un chef de niveau 4–6), troupe de guerre (10–24 plus 2-4 chauve-souris sanguinaires) ou tribu (40–400 plus 100% de non-combattants, 1 sergent de niveau 3 tous les 20 adultes, 1 ou 2 lieutenants de niveau 4–5, 1 chef de niveau 6–8, 10–24 chauve-souris sanguinaires et 2–4 ratsgarous)</span></div>
+					<div><strong class="stat" data-lng="challenge_rating"></strong>&nbsp;: <span class="line">1/3</span></div>
+					<div><strong class="stat" data-lng="treasure"></strong>&nbsp;: <span class="line">1d6 po, 25% gemme turquoise, armure de cuir, targe, épée courte, fronde, 1d10 billes</span></div>
+					<div><strong class="stat" data-lng="alignment"></strong>&nbsp;: <span class="line">généralement chaotique mauvais</span></div>
+					<div><strong class="stat" data-lng="advancement"></strong>&nbsp;: <span class="line">par une classe de personnage</span></div>
+					<div><strong class="stat" data-lng="level_adjustment"></strong>&nbsp;: <span class="line">+0</span></div>
+				</div>
+				<div class="detail">
+					<h2 class="hide" data-lng="cre_desc"></h2>
+					<p>Les xvarts sont de petits humanoïdes cruels et lâches à mi-chemin entre le gobelin et le kobold.</p>
+					<p>Les xvarts sont chauves et ont une peau bleue avec de grands yeux globuleux de couleur orange vif. Ils mesurent environ 90 cm et pèsent une vingtaine de kilos. Ils portent habituellement des habits sales faits de tissus rapiécés.</p>
+					<p>Les xvarts parlent le gobelin. Les plus intelligents d'entre eux apprennent parfois le draconien tel qu'il est parlé par les kobolds.</p>
+					<h2 data-lng="cre_combat"></h2>
+					<p>Bien que d'un naturel agressif, les xvarts mènent rarement des assauts loin de leurs campements. Il est très rare de les voir attaquer en infériorité numérique. Ils préfèrent mener des raids à la nuit tombée pour tirer profit de leur discrétion naturelle et submerger leurs adversaires au moment où ils sont le moins aptes à se défendre.</p>
+					<p><strong>Compétences.</strong> Les xvarts bénéficient d'un bonus racial de +4 aux tests de Discrétion effectués dans l'obscurité.</p>
+				</div>
+			</div>
+		</article>
+		<script>
+			window.onload = function() {
+				initialize();
+				var img = createImage("cre/xvart_1e.jpg", "Xvart", $lng.copy_wotc);
+				var img = createImage("cre/xvart_2e.jpg", "Xvart", $lng.copy_wotc);
+				var img = createImage("cre/xvart_3e.jpg", "Xvart", $lng.copy_wotc);
+				var a = $sounds, b = [], k;
+				for (k in a) if (a[k].tag == "xvart") b.push(a[k]);
+				document.querySelector(".media").appendChild(img);
+				document.querySelector(".media").appendChild(createAudioPlayer(b));
+			};
+		</script>
+	</body>
+<html>

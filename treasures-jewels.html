@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="scr/boot.js"></script>
+		<script src="scr/treas.js"></script>
+		<script src="dat/jewels.js"></script>
+	</head>
+	<body>
+		<h1><span data-lng="jewels"></span></h1>
+		<dl id="filter" class="subnav">
+			<dt><span data-lng="avg_value"></span></dt>
+			<dd data-filter-erase class="reset">&times;</dd>
+		</dl>
+		<div class="row">
+			<div class="col s0 m6">
+				<table id="table" class="vanilla">
+					<thead>
+						<tr>
+							<th><span data-lng="jewel"></span><span data-sort="name-asc"></span><span data-sort="name-desc"></span></th>
+							<th><span data-lng="value"></span><span data-sort="value-asc" class="active"></span><span data-sort="value-desc"></span></th>
+							<th class="hide-screen"><span data-lng="desc"></span></th>
+							<th><span data-lng="id"></span></th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+			<div class="col s0 m4 hide-print">
+				<div id="rand">
+					<div class="box margin">
+						<fieldset>
+							<legend data-lng="generate"></legend>
+							<button data-generate><i class="random"></i></button>
+							<small>&nbsp;&times;<span data-roll>0</span></small>
+							<input type="range" value="100" step="5" min="0" max="100" data-prob>
+							<small><output>100</output><span class="percent">%</span></small>
+							<button style="margin-left: .5rem;" data-reset><i class="eraser"></i></button>
+						</fieldset>
+					</div>
+					<div class="box margin border" style="display: none;" data-box>
+						<div class="clear transparent" style="display: none;" data-null>
+							<div class="left small">&times;<span data-null-roll>0</span></div>
+							<div class="left" data-lng="nothing"></div>
+						</div>
+						<div data-out></div>
+						<div class="clear" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px dotted silver; display: none;" data-sum>
+							<div class="left small">
+								&times;<span data-sum-roll>0</span>
+							</div>
+							<div class="left" data-lng="total"></div>
+							<div class="right">
+								<span data-sum-value>0</span>&nbsp;<span data-sum-currency></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="desc" class="box margin border" style="display: none;"></div>
+			</div>
+		</div>
+		<script>
+			window.onload = function() {
+				initialize();
+				treasures.init({"data" : $jewels});
+			};
+		</script>
+	</body>
+<html>

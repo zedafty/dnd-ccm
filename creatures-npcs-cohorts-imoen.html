@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head data-include="cre,coo,snd,css,crs">
+		<meta charset="utf-8">
+		<script src="scr/boot.js"></script>
+	</head>
+	<body>
+		<article class="clear">
+			<div class="media"></div>
+			<div class="record">
+				<div class="topic">
+					<h1></h1>
+					<p class="source"><span class="hide"><strong data-lng="source"></strong>&nbsp;: </span><cite></cite></p>
+				</div>
+				<div class="stat-block">
+					<h2 class="hide" data-lng="cre_stats"></h2>
+					<div class="head upper"><span class="hide"><strong data-lng="class_and_level"></strong>&nbsp;: </span><span style="display: none;" data-stat="cls_lvl"></span></div>
+					<div class="head lower"><span class="hide"><strong data-lng="type_and_size"></strong>&nbsp;: </span><span data-stat="type_size"></span></div>
+					<div><strong class="stat" data-lng="hit_dice"></strong>&nbsp;: <span class="line" data-stat="hd"></span></div>
+					<div><strong class="stat" data-lng="initiative"></strong>&nbsp;: <span class="line" data-stat="init"></span></div>
+					<div><strong class="stat" data-lng="speed"></strong>&nbsp;: <span class="line" data-stat="speed"></span></div>
+					<div><strong class="stat" data-lng="armor_class"></strong>&nbsp;: <span class="line" data-stat="ac"></span></div>
+					<div><strong class="stat" data-lng="base_attack_grapple"></strong>&nbsp;: <span class="line" data-stat="bab_grap"></span></div>
+					<div><strong class="stat" data-lng="attack"></strong>&nbsp;: <span class="line" data-stat="atk"></span></div>
+					<div><strong class="stat" data-lng="full_attack"></strong>&nbsp;: <span class="line" data-stat="full_atk"></span></div>
+					<div><strong class="stat" data-lng="space_reach"></strong>&nbsp;: <span class="line" data-stat="space_reach"></span></div>
+					<div><strong class="stat" data-lng="special_attacks"></strong>&nbsp;: <span class="line" data-stat="spe_atk"></span></div>
+					<div><strong class="stat" data-lng="special_qualities"></strong>&nbsp;: <span class="line" data-stat="spe_qlt"></span></div>
+					<div><strong class="stat" data-lng="saves"></strong>&nbsp;: <span class="line" data-stat="sv"></span></div>
+					<div><strong class="stat" data-lng="abilities"></strong>&nbsp;: <span class="line" data-stat="ab"></span></div>
+					<div><strong class="stat" data-lng="skills"></strong>&nbsp;: <span class="line" data-stat="sk"></span></div>
+					<div><strong class="stat" data-lng="feats"></strong>&nbsp;: <span class="line" data-stat="ft"></span></div>
+					<div><strong class="stat" data-lng="environment"></strong>&nbsp;: <span class="line" data-stat="env"></span></div>
+					<div><strong class="stat" data-lng="organization"></strong>&nbsp;: <span class="line" data-stat="org"></span></div>
+					<div><strong class="stat" data-lng="challenge_rating"></strong>&nbsp;: <span class="line" data-stat="cr"></span></div>
+					<div><strong class="stat" data-lng="treasure"></strong>&nbsp;: <span class="line" data-stat="trs"></span></div>
+					<div><strong class="stat" data-lng="alignment"></strong>&nbsp;: <span class="line" data-stat="aln"></span></div>
+					<div><strong class="stat" data-lng="advancement"></strong>&nbsp;: <span class="line" data-stat="adv"></span></div>
+					<div><strong class="stat" data-lng="level_adjustment"></strong>&nbsp;: <span class="line" data-stat="adj"></span></div>
+				</div>
+				<div class="detail">
+					<h2 class="hide" data-lng="cre_desc"></h2>
+					<p>Interrogée sur son passé, IMOEN vous tape sur l'épaule, facétieuse, et dit que vous devez vous le rappeler, car vous avez grandi avec elle. De fait, certains de vos meilleurs souvenirs sont ceux de votre rencontre avec ce bel ange. Elle est arrivée, tout comme vous, quoique dix ans plus tard dans la vie, à Château-Suif et elle a passé plus de temps avec ce bourru de Winthrop qu'avec Gorion. « Gros-plein-de soupe », elle l'appelait, au grand désarroi du vieil aubergiste.</p>
+					<p>Imoen est restée très enfant, et elle a l'air ravie de jouer à être votre petite soeur, bien que vous soyez tous les deux du même âge. Son sourire radieux vous dit qu'elle vous suivra partout où vous irez.</p>
+					<h2 data-lng="cre_combat"></h2>
+					<p>Imoen n'aime pas la violence. Néanmoins, elle se battra farouchement si ses amis sont attaqués.</p>
+					<p>Au combat, Imoen préfère se tenir loin du front et tirer profit de sa dextérité élevée pour cribler les ennemis de flèches. Elle pourra essayer de prendre un adversaire en tenaille pour lui porter une attaque sournoise si un allié se trouve en mauvaise posture.</p>
+					<h2 class="hide" data-lng="cre_specs"></h2>
+				</div>
+			</div>
+		</article>
+		<script>
+			window.onload = function() {
+				initialize();
+				initializeCreature($cohorts, "IMOEN");
+			};
+		</script>
+	</body>
+<html>

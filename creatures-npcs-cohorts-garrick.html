@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head data-include="cre,coo,snd,css,crs">
+		<meta charset="utf-8">
+		<script src="scr/boot.js"></script>
+	</head>
+	<body>
+		<article class="clear">
+			<div class="media"></div>
+			<div class="record">
+				<div class="topic">
+					<h1></h1>
+					<p class="source"><span class="hide"><strong data-lng="source"></strong>&nbsp;: </span><cite></cite></p>
+				</div>
+				<div class="stat-block">
+					<h2 class="hide" data-lng="cre_stats"></h2>
+					<div class="head upper"><span class="hide"><strong data-lng="class_and_level"></strong>&nbsp;: </span><span style="display: none;" data-stat="cls_lvl"></span></div>
+					<div class="head lower"><span class="hide"><strong data-lng="type_and_size"></strong>&nbsp;: </span><span data-stat="type_size"></span></div>
+					<div><strong class="stat" data-lng="hit_dice"></strong>&nbsp;: <span class="line" data-stat="hd"></span></div>
+					<div><strong class="stat" data-lng="initiative"></strong>&nbsp;: <span class="line" data-stat="init"></span></div>
+					<div><strong class="stat" data-lng="speed"></strong>&nbsp;: <span class="line" data-stat="speed"></span></div>
+					<div><strong class="stat" data-lng="armor_class"></strong>&nbsp;: <span class="line" data-stat="ac"></span></div>
+					<div><strong class="stat" data-lng="base_attack_grapple"></strong>&nbsp;: <span class="line" data-stat="bab_grap"></span></div>
+					<div><strong class="stat" data-lng="attack"></strong>&nbsp;: <span class="line" data-stat="atk"></span></div>
+					<div><strong class="stat" data-lng="full_attack"></strong>&nbsp;: <span class="line" data-stat="full_atk"></span></div>
+					<div><strong class="stat" data-lng="space_reach"></strong>&nbsp;: <span class="line" data-stat="space_reach"></span></div>
+					<div><strong class="stat" data-lng="special_attacks"></strong>&nbsp;: <span class="line" data-stat="spe_atk"></span></div>
+					<div><strong class="stat" data-lng="special_qualities"></strong>&nbsp;: <span class="line" data-stat="spe_qlt"></span></div>
+					<div><strong class="stat" data-lng="saves"></strong>&nbsp;: <span class="line" data-stat="sv"></span></div>
+					<div><strong class="stat" data-lng="abilities"></strong>&nbsp;: <span class="line" data-stat="ab"></span></div>
+					<div><strong class="stat" data-lng="skills"></strong>&nbsp;: <span class="line" data-stat="sk"></span></div>
+					<div><strong class="stat" data-lng="feats"></strong>&nbsp;: <span class="line" data-stat="ft"></span></div>
+					<div><strong class="stat" data-lng="environment"></strong>&nbsp;: <span class="line" data-stat="env"></span></div>
+					<div><strong class="stat" data-lng="organization"></strong>&nbsp;: <span class="line" data-stat="org"></span></div>
+					<div><strong class="stat" data-lng="challenge_rating"></strong>&nbsp;: <span class="line" data-stat="cr"></span></div>
+					<div><strong class="stat" data-lng="treasure"></strong>&nbsp;: <span class="line" data-stat="trs"></span></div>
+					<div><strong class="stat" data-lng="alignment"></strong>&nbsp;: <span class="line" data-stat="aln"></span></div>
+					<div><strong class="stat" data-lng="advancement"></strong>&nbsp;: <span class="line" data-stat="adv"></span></div>
+					<div><strong class="stat" data-lng="level_adjustment"></strong>&nbsp;: <span class="line" data-stat="adj"></span></div>
+				</div>
+				<div class="detail">
+					<h2 class="hide" data-lng="cre_desc"></h2>
+					<p>Interrogé sur son passé, GARRICK explique qu'il faisait partie d'une célèbre troupe de comédiens, les Troubadours de Valbise. Ils parcouraient la côte de Padhiver jusqu'en Amn, et jouaient souvent pour les Ducs de la Porte de Baldur, entre autres nobles. De fait, quand la troupe était à son apogée, rares étaient ceux qui pouvaient se payer ses services. Mais Garrick n'a pas que de bons souvenirs de cette époque, car il y avait là-dessous un mystère déplaisant. Il semble qu'il ait découvert que les spectacles servaient à couvrir des vols, et il a déclaré qu'il ne voulait rien avoir à faire avec ça. Chassé par ses camarades, il ne souhaite désormais que voyager et jouer sa musique à qui voudra l'entendre. Il est jeune, naïf, et un tout petit peu trop confiant.</p>
+					<h2 data-lng="cre_combat"></h2>
+					<p>Garrick n'apprécie guère les combats. Il préfère se tenir à distance et encourager ses alliés en utilisant sa musique de barde. Il essaiera de lancer ses sorts d'enchantement sur ses opposants pour les mettre hors combat avant de se servir de son arbalète ou de prendre la fuite.</p>
+					<h2 class="hide" data-lng="cre_specs"></h2>
+					<p><strong>Sorts</strong>. Barde&nbsp;: <strong>O</strong> (4) &mdash; <em>Berceuse</em> (DD 13), <em>Convocation d'instrument</em>, <em>Hébétement</em> (DD 13), <em>Prestidigitation</em>, <em>Son imaginaire</em> ; <strong>I</strong> (1) &mdash; <em>Sommeil</em> (DD 14), <em>Fou rire</em> (DD 14).</p>
+				</div>
+			</div>
+		</article>
+		<script>
+			window.onload = function() {
+				initialize();
+				initializeCreature($cohorts, "GARRICK");
+			};
+		</script>
+	</body>
+<html>

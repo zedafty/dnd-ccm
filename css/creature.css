@@ -1,0 +1,162 @@
+/* -------------------------------------------------------------------------- */
+/* # Creature */
+/* -------------------------------------------------------------------------- */
+
+.topic {}
+.record {
+	float: left;
+	width: 72.5%;
+}
+.media {
+	float: right;
+	width: 25%;
+}
+
+/* -------------------------------------------------------------------------- */
+/* # Statistics Block */
+/* -------------------------------------------------------------------------- */
+
+.stat-block {
+	font-size: 0;
+}
+.stat-block:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+.stat-block > div {
+	clear: left;
+}
+.stat-block .head {
+	margin-bottom: 1rem;
+	line-height: 1;
+	font-size: 1.5rem;
+	font-weight: bold;
+	font-family: 'pterra-dactyl';
+}
+.stat-block .head.upper {
+	padding-left: .75rem;
+	font-size: 1.625rem;
+	color: slategray;
+}
+.stat-block .head.lower {
+	padding-left: 1.5rem;
+	font-size: 1.5rem;
+	color: indianred;
+}
+.stat-block .stat,
+.stat-block .line {
+	display: inline-block;
+	font-size: .875rem;
+	padding: .25rem;
+}
+.stat-block .stat {
+	float: left;
+	width: 25%;
+	opacity: .5;
+}
+.stat-block .line {
+	width: 75%;
+}
+
+/* -------------------------------------------------------------------------- */
+/* # Detail */
+/* -------------------------------------------------------------------------- */
+
+.detail {}
+
+.detail p > strong {
+	color: lightslategray;
+}
+
+/* -------------------------------------------------------------------------- */
+/* # Image */
+/* -------------------------------------------------------------------------- */
+
+.image {}
+
+/* -------------------------------------------------------------------------- */
+/* # Audio */
+/* -------------------------------------------------------------------------- */
+
+.audio {
+	margin: 0 0 1rem;
+	font-size: .875em;
+	border: 1px solid gainsboro;
+	background-color: rgb(248, 248, 240);
+}
+.audio audio {
+	width: 100%;
+}
+.audio ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.audio li {
+	margin: 0;
+}
+.audio li a {
+	display: block;
+	padding: .25rem .5rem;
+}
+.audio li a.icon:before {
+	margin-right: .5rem;
+}
+.audio li a:hover {
+	background-color: rgba(128, 128, 96, .25);
+}
+.audio li a:focus {
+	background-color: darkblue;
+	color: white;
+}
+
+/* -------------------------------------------------------------------------- */
+/* # Print */
+/* -------------------------------------------------------------------------- */
+
+@media print {
+	.record {
+		float: none;
+		width: 100%;
+	}
+	.media {
+		display: none;
+	}
+}
+
+/* -------------------------------------------------------------------------- */
+/* # Responsive */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (max-width: 639px) {
+	.media,
+	.topic,
+	.record,
+	.stat-block {
+		float: none;
+		width: 100%;
+	}
+	.media:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+	.image {
+		float: left;
+		width: 47.5%;
+		margin-right: 5%;
+	}
+	.audio {
+		float: left;
+		width: 47.5%;
+		margin: 0 auto 1rem;
+	}
+}
+@media screen and (max-width: 479px) {
+	.stat-block .stat,
+	.stat-block .line {
+		float: none;
+		width: 100%;
+	}
+}

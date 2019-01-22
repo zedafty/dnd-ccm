@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head data-include="snd,css,crs">
+		<meta charset="utf-8">
+		<script src="scr/boot.js"></script>
+	</head>
+	<body>
+		<article>
+			<div class="media"></div>
+			<div class="record">
+				<div class="topic">
+					<h1>Grouilleux</h1>
+					<p class="source"><span class="hide"><strong data-lng="source"></strong>&#8239;: </span><cite data-src="bg1_fr"></cite></p>
+				</div>
+				<div class="stat-block">
+					<h2 class="hide" data-lng="cre_stats"></h2>
+					<div class="head upper"><span class="hide"><strong data-lng="class_and_level"></strong>&nbsp;: </span><span style="display: none;">Humanoïde monstrueux de niveau 1</span></div>
+					<div class="head lower"><span class="hide"><strong data-lng="type_and_size"></strong>&nbsp;: </span><span>Humano&iuml;de monstrueux de taille P</span></div>
+					<div><strong class="stat" data-lng="hit_dice"></strong>&nbsp;: <span class="line">1d8+1 (5 pv)</span></div>
+					<div><strong class="stat" data-lng="initiative"></strong>&nbsp;: <span class="line">+2</span></div>
+					<div><strong class="stat" data-lng="speed"></strong>&nbsp;: <span class="line">9 m (6 cases)</span></div>
+					<div><strong class="stat" data-lng="armor_class"></strong>&nbsp;: <span class="line">14 (+1 taille, +2 Dex, +1 naturelle), contact 13, pris au dépourvu 12</span></div>
+					<div><strong class="stat" data-lng="base_attack_grapple"></strong>&nbsp;: <span class="line">+1/-2</span></div>
+					<div><strong class="stat" data-lng="attack"></strong>&nbsp;: <span class="line">griffes (+2 corps à corps, 1d4+1)</span></div>
+					<div><strong class="stat" data-lng="full_attack"></strong>&nbsp;: <span class="line">2 griffes (+2 corps à corps, 1d4+1) et morsure (+0 corps à corps, 1d3+1)</span></div>
+					<div><strong class="stat" data-lng="space_reach"></strong>&nbsp;: <span class="line">1,50 m/1,50 m</span></div>
+					<div><strong class="stat" data-lng="special_attacks"></strong>&nbsp;: <span class="line">bond</span></div>
+					<div><strong class="stat" data-lng="special_qualities"></strong>&nbsp;: <span class="line">odorat, vision nocturne</span></div>
+					<div><strong class="stat" data-lng="saves"></strong>&nbsp;: <span class="line">Réf +4, Vig +1, Vol +1</span></div>
+					<div><strong class="stat" data-lng="abilities"></strong>&nbsp;: <span class="line">For 13, Dex 15, Con 13, Int 6, Sag 9, Cha 6</span></div>
+					<div><strong class="stat" data-lng="skills"></strong>&nbsp;: <span class="line">Détection +1, Discrétion +6, Perception auditive +1, Survie +3</span></div>
+					<div><strong class="stat" data-lng="feats"></strong>&nbsp;: <span class="line">Attaques multiples, Pistage<sup>S</sup></span></div>
+					<div><strong class="stat" data-lng="environment"></strong>&nbsp;: <span class="line">forêts tempérées, souterrains</span></div>
+					<div><strong class="stat" data-lng="organization"></strong>&nbsp;: <span class="line">groupe (4–9) ou bande (10–100 plus 20% de non-combattants)</span></div>
+					<div><strong class="stat" data-lng="challenge_rating"></strong>&nbsp;: <span class="line">1/3</span></div>
+					<div><strong class="stat" data-lng="treasure"></strong>&nbsp;: <span class="line">&mdash;</span></div>
+					<div><strong class="stat" data-lng="alignment"></strong>&nbsp;: <span class="line">toujours chaotique neutre</span></div>
+					<div><strong class="stat" data-lng="advancement"></strong>&nbsp;: <span class="line">2-3 DV (taille P)</span></div>
+					<div><strong class="stat" data-lng="level_adjustment"></strong>&nbsp;: <span class="line">+0</span></div>
+				</div>
+				<div class="detail">
+					<h2 class="hide" data-lng="cre_desc"></h2>
+					<p>Les grouilleux sont de petits humanoïdes nocturnes qui vivent dans de nombreuses régions de Féérûne.</p>
+					<p>La première impression que fait un groupe de grouilleux est celle d'un amas de chairs et de poils tressaillant frénétiquement. Ensemble, les grouilleux forment une masse d'humanoïdes hirsutes aux oreilles pointues, à la chevelure noire et aux visages grimaçants. Leurs yeux sont noirs, et brillent d'une lueur névrotique.</p>
+					<h2 data-lng="cre_combat"></h2>
+					<p>Les grouilleux attaquent en grand nombre, poussant des cris d'effraies, caquetant, hurlant, et produisant des sons atroces avec leurs bouches. Les créatures vociférantes avancent de manière désordonnée sans respecter la moindre formation de groupe.</p>
+					<p>Une horde de grouilleux ne ralentit que le temps de tuer ou détruire ce qui se trouve sur son passage. Toute forme de vie est dévorée, ce qui inclut les grouilleux morts dans la bataille, et tous les bâtiments mal protégés sont généralement détruits.</p>
+					<p>Les grouilleux combattent toujours jusqu'à la mort.</p>
+					<p><strong>Bond (Ext).</strong> Lorsqu'un grouilleux charge, il bondit sur sa proie et peut attaquer à outrance tout en continuant de bénéficier des effets de la charge.</p>
+					<p><strong>Compétences.</strong> Les grouilleux bénéficient d'un bonus racial de +4 aux tests de Survie.</p>
+				</div>
+			</div>
+		</article>
+		<script>
+			window.onload = function() {
+				initialize();
+				var img = createImage("cre/gibberling_1e.jpg", "Grouilleux", $lng.copy_wotc);
+				var img = createImage("cre/gibberling_2e.jpg", "Grouilleux", $lng.copy_wotc);
+				var img = createImage("cre/gibberling_3e.jpg", "Grouilleux", $lng.copy_wotc);
+				var a = $sounds, b = [], k;
+				for (k in a) if (a[k].tag == "gibberling") b.push(a[k]);
+				document.querySelector(".media").appendChild(img);
+				document.querySelector(".media").appendChild(createAudioPlayer(b));
+			};
+		</script>
+	</body>
+<html>

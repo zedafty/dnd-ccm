@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="scr/boot.js"></script>
+	</head>
+	<body>
+
+		<h1 data-lng="cohorts"></h1>
+
+		<ul id="summary"></ul>
+
+		<p>Vous trouverez <a data-href="imoen"></a> près de la Croisée des chemins.</p>
+		<p>Vous trouverez <a data-href="imoen">l'insupportable petite voleuse du début</a> près de la Croisée des chemins.</p>
+
+		<script>
+			window.onload = function() {
+				createMenu($nav.cohorts, document.getElementById("summary"), getLocationFoldPrefix());
+				initialize();
+			};
+		</script>
+	</body>
+<html>

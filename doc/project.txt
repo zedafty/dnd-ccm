@@ -1,0 +1,490 @@
+================================================================================
+--------------------------------------------------------------------------------
+# DnD CCM (Dungeons & Dragons Custom Campaign Manager | Gestionnaire de campagne personnalisée Donjons & Dragons)
+--------------------------------------------------------------------------------
+================================================================================
+
+  # Objective
+    Interactive D&D v3.5 Toolset for Creative DMs | Jeu d'outils interactifs D&D 3.5 pour MJ créatifs
+
+  # Technologies
+    HTML, CSS, JavaScript
+
+  # Features
+    Encounter manager
+    Stores browser
+    Creatures browser
+    Treasure generator
+  * Unit converter
+  * Dice generator
+  * Spell browser
+
+  # Compliance
+    Portable (Server-less / DB-less)
+    Open (Full JS Data Files)
+
+================================================================================
+--------------------------------------------------------------------------------
+# Special Chars
+--------------------------------------------------------------------------------
+================================================================================
+
+’ “ ” « » … × — – ½ Œ œ Æ æ
+
+================================================================================
+--------------------------------------------------------------------------------
+# Random List Number
+--------------------------------------------------------------------------------
+================================================================================
+
+  var a = [], i = 0, r, n, m = 12;
+  while (i < m) {
+    r = Math.floor(Math.random() * m) + 1;
+    n = r < 10 ? "0" + r : r.toString();
+    if (a.indexOf(n) != -1) continue;
+    else {
+      a.push(n);
+      console.log(n);
+      i++;
+    }
+  }
+
+================================================================================
+--------------------------------------------------------------------------------
+# List Ab Mod
+--------------------------------------------------------------------------------
+================================================================================
+
+  for (var i = 20; i > 0; i--) {
+    var n = Math.floor((i - 10) / 2);
+    console.log(i + " : " + n);
+  }
+
+================================================================================
+--------------------------------------------------------------------------------
+# Sizes
+--------------------------------------------------------------------------------
+================================================================================
+
+  Abbr  Long            Abbr  Long
+  "f"   Fine            I     Infime
+  "d"   Diminutive      Min   Minuscule
+  "t"   Tiny            TP    Très petite
+  "s"   Small           P     Petite
+  "m"   Medium          M     Moyenne
+  "l"   Large           G     Grande
+  "h"   Huge            TG    Très grande
+  "g"   Gargantuan      Gig   Gigantesque
+  "c"   Colossal        C     Colossale
+
+================================================================================
+--------------------------------------------------------------------------------
+# Reduced Speed Table
+--------------------------------------------------------------------------------
+================================================================================
+
+  Base     Reduced   Base    Reduced
+  10  ft.  5 ft.     2t      1t -- Out of scope
+  15  ft.  10 ft.    3t      2t -- Out of scope
+  20  ft.  15 ft.    4t      3t
+  30  ft.  20 ft.    6t      4t
+  40  ft.  30 ft.    8t      6t
+  50  ft.  35 ft.    10t     7t
+  60  ft.  40 ft.    12t     8t
+  70  ft.  50 ft.    14t     10t
+  80  ft.  55 ft.    16t     11t
+  90  ft.  60 ft.    18t     12t
+  100 ft.  70 ft.    20t     14t
+
+================================================================================
+--------------------------------------------------------------------------------
+# Language Tables Prefixes
+--------------------------------------------------------------------------------
+================================================================================
+
+  - core => (none)
+  - feat => fts (char)
+  // spe_qlt => qlt (race)
+  // spe_atk => abs (cls)
+  // skill => sks
+  // item => itm
+  // ammunition => amo ...
+
+================================================================================
+--------------------------------------------------------------------------------
+# Items Prefixes (3-chars base)
+--------------------------------------------------------------------------------
+================================================================================
+
+  * foo => food
+  * dks => drinks
+  * lod => lodge = ren => rentals ???
+  * spl => spells = cur => cures ???
+  ---
+  - amo => ammunitions
+  - ptn => potions
+  - scr => scrolls
+  - wnd => wands
+  ---
+  - wpn => weapons
+  - nwp => natural_weapons
+  ---
+  - hlm => helms
+  - arm => armors
+  - shd => shields
+  ---
+  - clk => cloaks
+  - brc => bracers
+  - gnt => gauntlets
+  - blt => belts
+  - bts => boots
+  ---
+  - rng => ring
+  - amu => amulet
+  --
+  - gem => gem
+  --
+  - bks => books
+  - msc => miscellaneous (incl. keys/notes/letters/writtings/writs)
+
+================================================================================
+--------------------------------------------------------------------------------
+# Creature Directories
+--------------------------------------------------------------------------------
+================================================================================
+
+  - dir = chars
+    cat = pc
+    cat = npc
+  - dir = assocs
+    cat = cohort
+    cat = familiar
+    cat = ani_comp
+    cat = mount
+  - dir = monsters
+    cat = mon
+  - dir = summons
+    cat = sum_mon
+    cat = sum_nat
+
+================================================================================
+--------------------------------------------------------------------------------
+# Creature Categories
+--------------------------------------------------------------------------------
+================================================================================
+
+  > pcs
+  > npc
+  > mon
+  > mnt
+  > coo
+  > fam
+  > ani
+  > sum
+  > sun
+
+================================================================================
+--------------------------------------------------------------------------------
+# Helm Types
+--------------------------------------------------------------------------------
+================================================================================
+
+  "type" : "hlm_arm"
+
+================================================================================
+--------------------------------------------------------------------------------
+# Armor Types
+--------------------------------------------------------------------------------
+================================================================================
+
+  "type" : "lgt_arm"
+  "type" : "med_arm"
+  "type" : "hvy_arm"
+
+================================================================================
+--------------------------------------------------------------------------------
+# Shield Types
+--------------------------------------------------------------------------------
+================================================================================
+
+  "type" : "min_shd"
+  "type" : "lgt_shd"
+  "type" : "hvy_shd"
+  "type" : "max_shd"
+
+================================================================================
+--------------------------------------------------------------------------------
+# Weapon Types and Cats
+--------------------------------------------------------------------------------
+================================================================================
+
+  "type" : "lgt_wpn"
+  "type" : "1hd_wpn"
+  "type" : "2hd_wpn"
+  "type" : "thr_wpn"
+  "type" : "prj_wpn"
+
+================================================================================
+--------------------------------------------------------------------------------
+# Weapon Categories
+--------------------------------------------------------------------------------
+================================================================================
+
+  "cat" : "simple"
+  "cat" : "martial"
+  "cat" : "exotic"
+
+================================================================================
+--------------------------------------------------------------------------------
+# Natural Weapon Types and Cats
+--------------------------------------------------------------------------------
+================================================================================
+
+  "type" : "nat_wpn"
+  "type" : "mul_wpn"
+
+================================================================================
+--------------------------------------------------------------------------------
+# Natural Weapon Types and Cats
+--------------------------------------------------------------------------------
+================================================================================
+
+  "cat" : "natural"
+
+================================================================================
+--------------------------------------------------------------------------------
+# Weapon Properties
+--------------------------------------------------------------------------------
+================================================================================
+
+  "prop" : {
+    "dmg" : "",
+    "dmg_type" : "",
+    "cri_rng" : "",
+    "cri_mul" : "",
+    "hit_rng" : "",
+    "to_hit" : ["1d6_fire", "disease", "poison"]
+  }
+
+================================================================================
+--------------------------------------------------------------------------------
+# To Hit Effects
+--------------------------------------------------------------------------------
+================================================================================
+
+  fire // damage
+  cold
+  elec
+  acid
+  sonic
+  negative
+  positive
+  str_drain // ab_drain
+  dex_drain
+  con_drain
+  int_drain
+  wis_drain
+  cha_drain
+  energy_drain // lvl_drain
+  magic_drain
+  poison // debiliting
+  disease
+  entangle // movement
+  slow
+  stun
+  paralysis
+  fear // mind
+  curse
+  blindness // body
+  deafness
+  combustion
+  petrification
+  slaying
+
+================================================================================
+--------------------------------------------------------------------------------
+# Specialized Skills
+--------------------------------------------------------------------------------
+================================================================================
+
+- craft (5 types)
+  craft_alchemy
+  craft_weaponsmithing
+  craft_armorsmithing
+  craft_bowmaking
+  craft_trapmaking
+- knowledge (10 types)
+  knowledge_arcana
+  knowledge_architecture_and_engineering
+  knowledge_dungeoneering
+  knowledge_geography
+  knowledge_history
+  knowledge_local
+  knowledge_nature
+  knowledge_nobility_and_royalty
+  knowledge_religion
+  knowledge_the_planes
+- perform (9 types)
+  perform_act
+  perform_comedy
+  perform_dance
+  perform_keyboard_instruments
+  perform_oratory
+  perform_percussion_instruments
+  perform_string_instruments
+  perform_wind_instruments
+  perform_sing
+
+================================================================================
+--------------------------------------------------------------------------------
+# Damage Reduction
+--------------------------------------------------------------------------------
+================================================================================
+
+> "damage_reduction",                                               => OK : "<a>Réduction des dégâts</a>"
+> {"damage_reduction" : 11},                                        => OK : "<a>Réduction des dégâts</a> (11/—)"
+> {"damage_reduction" : "magic"},                                   => OK : "<a>Réduction des dégâts</a> (5/magie)"
+> {"damage_reduction" : [11, "magic"]},                             => OK : "<a>Réduction des dégâts</a> (11/magie)"
+> {"damage_reduction" : ["magic", "evil"]}                          => OK : "<a>Réduction des dégâts</a> (5/magie et Mal)"
+> {"damage_reduction" : [11, "magic", "evil"]},                     => OK : "<a>Réduction des dégâts</a> (11/magie et Mal)"
+> {"damage_reduction" : ["magic", 11, "evil"]},                     => NO : "<a>Réduction des dégâts</a> (5/magie et Mal)"
+> {"damage_reduction" : [11, "evil", "dummy"]},                     => NO : "<a>Réduction des dégâts</a> (11/Mal)"
+> {"damage_reduction" : ["chaotic", "magic", "evil"]},              => OK : "<a>Réduction des dégâts</a> (5/Chaos et magie et Mal)"
+
+================================================================================
+--------------------------------------------------------------------------------
+# Energy Resistance
+--------------------------------------------------------------------------------
+================================================================================
+
+> "resistance_to_energy",                                           => OK : "<a>Résistance à une énergie destructive</a>"
+> {"resistance_to_energy" : 5},                                     => OK : "<a>Résistance</a> au feu (5), au froid (5), à l'électricité (5), à l'acide (5) et au son (5)"
+> {"resistance_to_energy" : "fire"},                                => OK : "<a>Résistance</a> au feu"
+> {"resistance_to_energy" : {"fire" : 5}},                          => OK : "<a>Résistance</a> au feu (5)"
+> {"resistance_to_energy" : {5 : "fire"}},                          => NO : "<a>Résistance à une énergie destructive</a>"
+> {"resistance_to_energy" : {"fire" : 5, "cold" : 5}},              => OK : "<a>Résistance</a> au feu (5) et au froid (5)"
+> {"resistance_to_energy" : {"acid" : 5, "fire" : 10, "cold" : 7}}, => OK : "<a>Résistance</a> à l'acide (5), au feu (10) et au froid (7)"
+
+================================================================================
+--------------------------------------------------------------------------------
+# Turn Resistance
+--------------------------------------------------------------------------------
+================================================================================
+
+> "turn_resistance",                                                => OK : "<a>Résistance au renvoi des morts-vivants</a>"
+> {"turn_resistance" : 2},                                          => OK : "<a>Résistance au renvoi des morts-vivants</a> (+2)"
+> {"turn_resistance" : "+2"},                                       => NO : "<a>Résistance au renvoi des morts-vivants</a>"
+
+================================================================================
+--------------------------------------------------------------------------------
+# Spell Resistance / Regeneration / Fast Healing
+--------------------------------------------------------------------------------
+================================================================================
+
+> "spell_resistance",                                               => OK : "<a>Résistance à la magie</a>"
+> {"spell_resistance" : 12},                                        => OK : "<a>Résistance à la magie</a> (12)"
+> {"spell_resistance" : "12"},                                      => NO : "<a>Résistance à la magie</a>"
+
+================================================================================
+--------------------------------------------------------------------------------
+# Constrict / Rake / Rend / Trample / Powerful Charge
+--------------------------------------------------------------------------------
+================================================================================
+
+> "constrict"       : roll + Str Mod -- Some exception with Improved Grab
+> "rake"            : roll + 1/2 Str Mod
+> "rend"            : roll + 3/2 Str Mod
+> "trample"         : roll + 3/2 Str Mod
+> "powerful_charge" : roll + 3/2 Str Mod (Minotaur) [2x Str Mod (Triceratops) -- Exception]
+
+================================================================================
+--------------------------------------------------------------------------------
+# Darkvision / Blindsense / Blindsight / Telepathy / Tremorsense
+--------------------------------------------------------------------------------
+================================================================================
+
+> "darkvision",                                                     => OK : "<a>Vision dans le noir</a>"
+> {"darkvision" : 12},                                              => OK : "<a>Vision dans le noir</a> (18 m)"
+> {"darkvision" : "60f"},                                           => OK : "<a>Vision dans le noir</a> (18 m)"
+> {"darkvision" : "18m"},                                           => OK : "<a>Vision dans le noir</a> (18 m)"
+
+================================================================================
+--------------------------------------------------------------------------------
+# Gaze Attack
+--------------------------------------------------------------------------------
+================================================================================
+
+> "gaze_attack",                                                    => OK : "<a>Regard</a>"
+> {"gaze_attack" : "paralyzing"},                                   => OK : "<a>Regard</a> paralysant"
+> {"gaze_attack" : ["paralyzing", "death"]},                        => OK : "<a>Regard</a> paralyzant et mortel"
+> {"gaze_attack" : ["paralyzing", "death", "evil"]},                => OK : "<a>Regard</a> paralyzant, mortel et imprécatoire"
+> {"gaze_attack" : "paralyzing"}, {"gaze_attack" : "death"},        => OK : "<a>Regard</a> paralyzant, <a>Regard</a> mortel"
+
+================================================================================
+--------------------------------------------------------------------------------
+# Immunities
+--------------------------------------------------------------------------------
+================================================================================
+
+  The "fire_immunity" should not be confused with {"immunities" : "fire"} ;
+  Same remark for "cold_immunity" and {"immunities" : "cold"}.
+  The property-less abilities suppose a vulnerability to the opposite energy,
+  while the others do not come along with such a downside.
+  Note that it is possible to 'fake' those perks by affecting the proper
+  "immunities" and "vulnerability_to_energy" to a creature.
+
+> "immunities",                                                     => OK : "<a>Immunité</a>"
+> {"immunities" : "fire"},                                          => OK : "<a>Immunité</a> contre le feu"
+> {"immunities" : ["fire", "cold"]},                                => OK : "<a>Immunité</a> contre le feu et le froid"
+> {"immunities" : ["fire", "cold", "poison"]},                      => OK : "<a>Immunité</a> contre le feu, le froid et le poison"
+
+  fire // Elemental Energies
+  cold
+  electricity
+  acid
+  sonic
+  poison // Debilitating Effects
+  disease
+  paralysis // Movement Restriction
+  stunning
+  petrification // Transmutation
+  polymorph
+  transformation
+  mind_affecting_effects // Mind-affecting Effects
+  charms
+  compulsions
+  fear
+  sleep
+  morale_effects
+  illusions // Illusions
+  patterns
+  phantasms
+  magic // Magical Effects
+  maze_spell
+  energy_drain // Creatures' Special Abilities
+  gaze_attack
+  critical_hits // Critical Hits
+
+================================================================================
+--------------------------------------------------------------------------------
+# Vulnerability to Energy
+--------------------------------------------------------------------------------
+================================================================================
+
+> "vulnerability_to_energy",                                        => OK : "<a>Vulnérabilité à une énergie destructive</a>"
+> {"vulnerability_to_energy" : "fire"},                             => OK : "<a>Vulnérabilité</a> au feu"
+> {"vulnerability_to_energy" : ["fire", "cold"]},                   => OK : "<a>Vulnérabilité</a> au feu et au froid"
+> {"vulnerability_to_energy" : ["fire", "cold", "sonic"]},          => OK : "<a>Vulnérabilité</a> au feu, au froid et au son"
+
+================================================================================
+--------------------------------------------------------------------------------
+# Feats
+--------------------------------------------------------------------------------
+================================================================================
+
+  All feats respond to the same formatting mecanism, as shown below.
+
+> "weapon_focus",                                                   => NO : "<a>Arme de prédilection</a>"
+> {"weapon_focus" : "greatclub"},                                   => OK : "<a>Arme de prédilection</a> (massue)"
+> {"weapon_focus" : ["greatclub", "javelin"]},                      => NO : "<a>Arme de prédilection</a> (massue)"
+> {"weapon_focus" : "greatclub"}, {"weapon_focus" : "javelin"},     => OK : "<a>Arme de prédilection</a> (massue), <a>Arme de prédilection</a> (javeline), "
