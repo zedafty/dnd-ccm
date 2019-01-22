@@ -4,8 +4,11 @@
 --------------------------------------------------------------------------------
 ================================================================================
 
-  # Objective
+  # Description
     Interactive D&D v3.5 Toolset for Creative DMs | Jeu d'outils interactifs D&D 3.5 pour MJ créatifs
+
+  # Tags
+    dnd dnd35 dnd-tools html-css-javascript
 
   # Technologies
     HTML, CSS, JavaScript
@@ -19,9 +22,24 @@
   * Dice generator
   * Spell browser
 
+  # Libraries
+    Font Awesome [https://fontawesome.com/]
+
+  # Fonts
+    Pterra-Dactyl by Margo Chase
+
   # Compliance
     Portable (Server-less / DB-less)
     Open (Full JS Data Files)
+
+================================================================================
+--------------------------------------------------------------------------------
+# History
+--------------------------------------------------------------------------------
+================================================================================
+
+  Started on March 20th, 2016
+  Stopped on July 14th, 2016
 
 ================================================================================
 --------------------------------------------------------------------------------
