@@ -2,11 +2,11 @@
 
   Dungeons & Dragons Custom Campaign Manager: Interactive D&D v3.5 Toolset for Creative DMs.
 
-### Current status
+### Status
 
-  * standby
+  * halted 2016-07-14
 
-### Current milestone
+### Milestone
 
   * draft
 
@@ -48,3 +48,4 @@
   Rules system under the Open Game License (OGL).
 
   Source code unlicensed.
+
